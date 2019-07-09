@@ -1,0 +1,22 @@
+.footer {
+  position: absolute;
+//  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-bottom: 1px solid var(--color-outline);
+  z-index: 10;
+}
+
+.footer--toggle {
+  position: absolute;
+  bottom: 0;
+  right: 10vw;
+  border-top-right-radius: var(--border-radius-md);
+  border-top-left-radius: var(--border-radius-md);
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(36,36,37,0.15);
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: var(--color-base);
+  text-decoration: none;
+}

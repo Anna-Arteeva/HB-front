@@ -1,0 +1,10 @@
+body {
+  font-family: $font-family-base;
+  color:       var(--color-base);
+  position: relative;
+  padding-bottom: 1px; //compensate for section margin
+
+  * {
+    box-sizing: border-box;
+  }
+}

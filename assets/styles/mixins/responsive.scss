@@ -1,0 +1,47 @@
+//  INFO
+//  Source: https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+//
+//  Example
+//  .header-title {
+//    font-size: 2rem;
+//
+//    @include for-phone-only {
+//      font-size: 1rem;
+//    }
+//  }
+
+$phone :            599px;
+$tablet-portrait:   600px;
+$tablet-landscape:  900px;
+$desktop:           1200px;
+$big-desktop:       1800px;
+
+@mixin for-phone-only {
+  @media (max-width: $phone) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: $tablet-portrait) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: $tablet-landscape) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: $desktop) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: $big-desktop) { @content; }
+}
+
+
+@mixin for-tablet-portrait-down {
+  @media (max-width: calc(#{$tablet-portrait} - 1px)) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: calc(#{$tablet-landscape} - 1px)) { @content; }
+}
+@mixin for-desktop-down {
+  @media (max-width: calc(#{$desktop} - 1px)) { @content; }
+}
+@mixin for-big-desktop-down {
+  @media (max-width: calc(#{$big-desktop} - 1px)) { @content; }
+}

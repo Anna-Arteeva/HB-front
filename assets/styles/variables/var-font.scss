@@ -1,0 +1,94 @@
+
+// Links
+//
+// Style anchor elements.
+:root {
+  --color-link: var(--color-brand);
+}
+
+$link-decoration:           none !default;
+$link-hover-decoration:     underline !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-base:            Muli, Roboto, SF, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// stylelint-enable value-keyword-case
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            600 !default;
+
+$font-weight-base:            $font-weight-light !default;
+
+$line-height-lg:              1.78 !default;
+$line-height-sm:              1.2 !default;
+$line-height-base:            1.65 !default;
+
+$h1-font-size:                calc(1.25rem + ((1vw - 4.8px) * 0.9722)) !default;
+$h2-font-size:                calc(1.1875rem + ((1vw - 4.8px) * 0.9028)) !default;
+$h3-font-size:                calc(1.125rem + ((1vw - 4.8px) * 0.8333)) !default;
+$h4-font-size:                calc(1.0625rem + ((1vw - 4.8px) * 0.6944)) !default;
+$h5-font-size:                calc(1rem + ((1vw - 4.8px) * 0.2)) !default;
+$h6-font-size:                calc(1rem + ((1vw - 4.8px) * 0.1389)) !default;
+
+$headings-margin-bottom:      .5em !default;
+$headings-font-family:        $font-family-base !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+$display1-size:               calc(1.625rem + ((1vw - 4.8px) * 1.6)) !default;
+$display2-size:               calc(1.225rem + ((1vw - 4.8px) * 1.4444)) !default;
+$display3-size:               calc(1.4rem + ((1vw - 4.8px) * 1.8)) !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             800 !default;
+$display2-weight:             800 !default;
+$display3-weight:             800 !default;
+$display4-weight:             800 !default;
+$display-line-height:         $headings-line-height !default;
+
+$lead-hero-font-size:         calc(1rem + ((1vw - 4.8px) * 0.7));
+$lead-font-size:              calc(1rem + ((1vw - 4.8px) * 0.2778)) !default;
+$lead-font-weight:            $font-weight-base !default;
+$sub-lead-font-size:          ($font-size-base * 1.25 * 0.8) !default;
+
+$small-font-size:             80% !default;
+
+$text-muted:                  var(--color-muted) !default;
+
+$blockquote-small-color:      var(--color-muted)  !default;
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+
+$hr-border-color:             rgba(var(--color-base) , .1) !default;
+
+$mark-padding:                .2em !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$kbd-box-shadow:              inset 0 -.1rem 0 rgba(var(--color-base) , .25) !default;
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+$hr-margin-y:                 .5em !default;
+
+

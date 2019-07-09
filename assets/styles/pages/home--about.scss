@@ -1,0 +1,65 @@
+
+// Secion About us
+
+.home--about {
+  @extend .section;
+  font-style: italic;
+  display: grid;
+
+  @include for-tablet-portrait-up {
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 6vh; //compensate for the moved-down image
+  }
+
+  @include for-tablet-portrait-down {
+    grid-template-rows: 1fr 1fr;
+    margin: $padding-h;
+  }
+}
+
+
+.home--about--content {
+
+  @include for-tablet-portrait-up {
+    padding-left: calc(200px + 8vw);
+    padding-bottom: $section-padding-v-sm;
+    padding-top: $section-padding-v-sm;
+    padding-right: $padding-h;
+
+    margin-left: -200px;
+    border-top-left-radius: var(--border-radius-lg);
+    border-bottom-left-radius: var(--border-radius-lg);
+    background: linear-gradient(138.08deg, var(--color-back) 0%, white 100%);
+  }
+
+  @include for-tablet-portrait-down {
+    margin-bottom: $section-padding-v-xs;
+  }
+
+
+}
+
+.home--about--image--wrapper {
+  display: flex;
+
+  @include for-tablet-portrait-down {
+    grid-row: 2;
+  }
+
+}
+
+.home--about--image {
+  background-image: url("assets/images/about.jpg");
+  background-size:  cover;
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+//  max-width: 400px;
+  position: relative;
+  height: 100%;
+
+  @include for-tablet-portrait-up {
+    bottom: -6vh;
+    right:  -5vw;
+  }
+
+}

@@ -1,0 +1,102 @@
+//TODO fix margins
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top:    .9em;
+  margin-bottom:    .5em;
+}
+
+h2, .h2 {
+  font-size: calc(1.1875rem + ((1vw - 4.8px) * 0.9028));
+}
+
+h6, .h6 {
+  font-size: calc(1rem + ((1vw - 4.8px) * 0.1389));
+}
+
+.text-blue {
+  color: #2B69B2 !important;
+}
+
+.text-gray {
+  color: $secondary-grey !important;
+}
+
+// Type display classes
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  line-height: $display-line-height;
+  font-family: $font-family-base;
+}
+
+.display-1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+}
+.display-2 {
+  font-size: $display2-size;
+  font-weight: $display2-weight;
+  margin-bottom: .8em;
+}
+.display-3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+}
+.display-4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+  line-height: $display-line-height;
+}
+
+.hero-lead {
+  font-size: $lead-hero-font-size;
+  font-family: $font-family-base;
+  line-height: $line-height-lg;
+  font-weight: $lead-font-weight;
+
+  //
+  max-width: 900px;
+}
+
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  font-family: $font-family-base;
+  line-height: $line-height-lg;
+}
+
+.sub-lead{
+  font-size: $sub-lead-font-size;
+}
+
+a {
+  font-weight: 400;
+}
+
+.link {
+  color: var(--color-brand);
+  text-decoration: underline;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-brand-variation);
+    text-decoration: none;
+  }
+}
+
+.icon-front-text {
+  img {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    padding-right: .5em;
+    margin-bottom: .2em;
+    box-sizing: content-box;
+  }
+}
+

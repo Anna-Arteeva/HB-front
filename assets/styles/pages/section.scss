@@ -1,0 +1,43 @@
+.section {
+  margin-top: $section-padding-v;
+  margin-bottom: $section-padding-v;
+  position: relative;
+
+  :first-child {
+  margin-top: 0;
+}
+}
+
+.section--footer {
+  border-bottom: 1px solid var(--color-outline);
+  display: flex;
+  justify-content: flex-end;
+  margin-top: $section-padding-v-sm;
+}
+
+.section--footer--link {
+  color: var(--color-brand);
+  border-bottom: 1px solid  var(--color-brand);
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+
+  margin: 0 0 -1px 16px;
+  padding-bottom: 16px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color:               var(--color-brand-variation);
+    border-bottom-color: var(--color-brand-variation);
+  }
+}
+
+.section-container {
+  @extend .section;
+  width:  90vw;
+ // max-width: 100vw;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,19 @@
+@import "styles/normalize";
+
+@import 'styles/variables/variables';
+@import 'styles/mixins/responsive';
+@import "styles/font-muli";
+@import "styles/base";
+
+@import "styles/base/typography";
+
+
+// basic components
+@import "styles/components/header";
+@import "styles/components/footer";
+@import "styles/components/carousel";
+
+//pages
+@import "styles/pages/home--hero";
+@import "styles/pages/home--about";
+@import "styles/pages/section";
