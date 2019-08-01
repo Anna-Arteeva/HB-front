@@ -16,8 +16,8 @@
 .home--hero--content-wrapper {
   display: flex;
   justify-content: flex-end; //pushes everything to the right
-  padding-right: $padding-h;
-  padding-left:  $padding-h;
+  padding-right: 3vw;
+  padding-left:  3vw;
 }
 
 .home--hero--content {
@@ -31,6 +31,10 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
+
+  @include for-tablet-landscape-down {
+    min-height: 60vh;
+  }
 }
 .home--hero--image-wrapper {
   display: flex;
@@ -77,5 +81,6 @@
 
   @include for-tablet-landscape-up {
     margin-right: -24vw;
+    margin-bottom: 2rem;
   }
 }

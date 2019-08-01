@@ -1,12 +1,38 @@
 .section {
-  margin-top: $section-padding-v;
-  margin-bottom: $section-padding-v;
-  position: relative;
+  margin:           auto;
+  padding:          $section-padding-v-sm 3vw;
+  position:         relative;
 
-  :first-child {
-  margin-top: 0;
+  @include for-desktop-up {
+    width: calc(100% - 6vw);
+    max-width: 100rem;
+  }
+
+  @include for-tablet-portrait-down {
+    width: 100vw;
+  }
 }
+
+.section--content {
+  margin: auto;
+  max-width: 60rem;
 }
+
+.section-back {
+  background-color: $color-back;
+  @extend .section;
+
+  @include for-tablet-portrait-up {
+    border-radius: var(--border-radius-md);
+  }
+}
+
+.dark-section {
+  @extend .section-back;
+  color: white;
+  background-color: $color-base;
+}
+
 
 .section--footer {
   border-bottom: 1px solid var(--color-outline);
@@ -35,9 +61,7 @@
 
 .section-container {
   @extend .section;
-  width:  90vw;
- // max-width: 100vw;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+  margin:           auto;
+//  padding:          $padding-v 3vw;
+  position:         relative;
 }
