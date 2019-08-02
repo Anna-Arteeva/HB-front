@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 1px solid var(--color-outline);
+  border-bottom: $border;
   position: relative;
 
   margin-top:     $section-padding-v-sm;

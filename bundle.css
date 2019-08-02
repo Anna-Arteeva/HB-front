@@ -317,7 +317,7 @@ template {
 
 :root {
   --border-width: 1px;
-  --border-color: var(--color-outline) !default;
+  --border-color: var(--color-outline);
   --border-radius-sm: 2px;
   --border-radius-md: 5px;
   --border-radius-lg: 13px; }
@@ -421,7 +421,7 @@ h6, .h6 {
   margin-bottom: .8em; }
 
 .display-3 {
-  font-size: calc(1.4rem + ((1vw - 4.8px) * 1.8));
+  font-size: calc(1.625rem + ((1vw - 4.8px) * 1.0309));
   font-weight: 800; }
 
 .display-4 {
@@ -467,9 +467,22 @@ a {
 .strong {
   font-weight: 600; }
 
-.text-secondary {
+.text-secondary, .events-table--duration, .events-table--organiser, .events-table--transport, .phone-only {
   color: rgba(47, 54, 59, 0.75);
   font-size: 0.9em; }
+
+.text-separator {
+  display: inline-block;
+  width: 1rem;
+  text-align: center; }
+  .text-separator:before {
+    content: '•';
+    color: rgba(47, 54, 59, 0.75);
+    font-size: 0.6em;
+    position: relative;
+    bottom: .1rem;
+    display: inline-block;
+    text-align: center; }
 
 .button,
 button,
@@ -616,7 +629,7 @@ input[type='submit'] {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 1px solid var(--color-outline);
+  border-bottom: 1px solid #E1E4EB;
   position: relative;
   margin-top: calc(4vh); }
   @media (max-width: 599px) {
@@ -682,7 +695,7 @@ input[type='submit'] {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  border-bottom: 1px solid var(--color-outline);
+  border-bottom: 1px solid #E1E4EB;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -863,7 +876,7 @@ input[type='submit'] {
       border-radius: var(--border-radius-md); } }
 
 .section--footer {
-  border-bottom: 1px solid var(--color-outline);
+  border-bottom: 1px solid #E1E4EB;
   display: flex;
   justify-content: flex-end;
   margin-top: calc(4vh); }
@@ -983,11 +996,63 @@ input[type='submit'] {
       bottom: -6vh;
       right: -5vw; } }
 
+.events-table--area-date {
+  grid-area: time;
+  font-weight: bold; }
+
+.events-table--area-title {
+  grid-area: title;
+  display: flex; }
+
+.events-table--area-departure {
+  grid-area: departure; }
+  @media (min-width: 900px) {
+    .events-table--area-departure {
+      border-bottom: solid 1px #E1E4EB; } }
+  @media (max-width: 599px) {
+    .events-table--area-departure div {
+      display: inline-block; } }
+
+.events-table--area-activity {
+  grid-area: activity; }
+  @media (min-width: 900px) {
+    .events-table--area-activity {
+      border-bottom: solid 1px #E1E4EB; } }
+  @media (max-width: 599px) {
+    .events-table--area-activity {
+      padding-top: .7rem;
+      padding-bottom: .7rem; } }
+
+.events-table--area-people {
+  grid-area: people; }
+  @media (min-width: 900px) {
+    .events-table--area-people {
+      border-bottom: solid 1px #E1E4EB;
+      text-align: right; } }
+
+.events-table--grid, .events-table-head, .events-table--row {
+  display: grid; }
+  @media (min-width: 1200px) {
+    .events-table--grid, .events-table-head, .events-table--row {
+      grid-template-columns: 4.3rem 2.5fr 1.4fr 2fr 1fr;
+      grid-template-areas: "time title departure activity people"; } }
+  @media (max-width: calc(1200px - 1px)) {
+    .events-table--grid, .events-table-head, .events-table--row {
+      grid-template-columns: 3.4rem 2.5fr 1.4fr 2fr .8fr;
+      grid-template-areas: "time title departure activity people"; } }
+  @media (max-width: 599px) {
+    .events-table--grid, .events-table-head, .events-table--row {
+      grid-template-columns: 3.4rem 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "time title" "time departure" "time activity" "time people"; } }
+
 .events-date {
   margin-bottom: .9em; }
   .events-date:first-of-type {
-    margin-bottom: -.5rem;
     margin-top: 5vh; }
+    @media (min-width: 600px) {
+      .events-date:first-of-type {
+        margin-bottom: -.5rem; } }
 
 .events-table {
   margin: 0;
@@ -995,22 +1060,30 @@ input[type='submit'] {
   padding: 0; }
 
 .events-table-head {
-  display: grid;
-  grid-template-columns: 4.4rem 2.5fr 1.4fr 2fr 1fr;
   color: rgba(47, 54, 59, 0.75);
   font-size: 0.8em;
   border-bottom: solid 1px #E1E4EB; }
   .events-table-head div {
     padding-bottom: .5rem; }
+  @media (max-width: 599px) {
+    .events-table-head {
+      display: none; } }
 
-.events-table-head--participants {
+.events-table-head--people {
   text-align: right; }
 
 .events-table--row {
-  display: grid;
-  grid-template-columns: 4.4rem 2.5fr 1.4fr 2fr 1fr;
   line-height: 1.4em;
   margin-top: 1rem; }
+  @media (max-width: 599px) {
+    .events-table--row {
+      border-top: 1px solid #E1E4EB;
+      padding-top: 1rem; }
+      .events-table--row:last-of-type {
+        border-bottom: 1px solid #E1E4EB;
+        padding-bottom: 1rem; } }
+  .events-table--row div:not(:last-of-type) {
+    padding-right: .5rem; }
   @media (min-width: 1200px) {
     .events-table--row {
       font-size: 1em; } }
@@ -1018,55 +1091,31 @@ input[type='submit'] {
     .events-table--row {
       font-size: 0.95em; } }
 
-.events-table--col-date {
-  font-weight: bold; }
-
-.events-table--col-title {
-  display: flex; }
-
-.events-table--col-departure {
-  border-bottom: solid 1px #E1E4EB; }
-
-.events-table--col-activity {
-  border-bottom: solid 1px #E1E4EB; }
-
-.events-table--col-participants {
-  border-bottom: solid 1px #E1E4EB;
-  text-align: right; }
-
-.events-table--duration {
-  color: rgba(47, 54, 59, 0.75);
-  font-size: 0.9em;
-  margin: 0; }
-
 .events-table--cover {
-  width: 4rem;
-  height: 4rem;
-  background: #F2F3F6;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  background-position: center;
-  background-size: cover; }
-
-.events-table--title-container {
-  margin-left: .7rem; }
+  display: none; }
+  @media (min-width: 900px) {
+    .events-table--cover {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      background: #F2F3F6;
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      margin-right: .7rem; } }
 
 .events-table--title {
   margin: 0;
   font-size: 1rem; }
 
-.text-separator {
-  display: inline-block;
-  width: 1rem;
-  text-align: center; }
-  .text-separator:before {
-    content: '•';
-    color: rgba(47, 54, 59, 0.75);
-    font-size: 0.6em;
-    position: relative;
-    bottom: .1rem;
-    display: inline-block;
-    text-align: center; }
+@media (max-width: 599px) {
+  .events-table--organiser {
+    display: none; } }
+
+@media (max-width: 599px) {
+  .events-table--activity-name {
+    font-weight: bold; } }
 
 .events-table--availability-have-places {
   color: #00AD7D; }
@@ -1080,5 +1129,9 @@ input[type='submit'] {
 .events-table--availability-waiting {
   color: #818790;
   font-style: italic; }
+
+@media (min-width: 900px) {
+  .phone-only {
+    display: none; } }
 
 /*# sourceMappingURL=bundle.css.map */

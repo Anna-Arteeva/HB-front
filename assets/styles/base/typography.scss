@@ -108,3 +108,19 @@ a {
   color: $color-base-light;
   font-size: 0.9em;
 }
+
+.text-separator {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+
+  &:before {
+    content: '•';
+    color: $color-base-light;
+    font-size: 0.6em;
+    position: relative;
+    bottom: .1rem;
+    display: inline-block;
+    text-align: center;
+  }
+}
