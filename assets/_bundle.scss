@@ -1,21 +1,21 @@
-@import "styles/normalize";
-
+@import "styles/base/normalize";
 @import 'styles/variables/variables';
 @import 'styles/mixins/responsive';
-@import "styles/font-muli";
-@import "styles/base";
 
+// common
+@import "styles/base/font-muli";
+@import "styles/base/body";
 @import "styles/base/typography";
 @import "styles/base/button";
-
 
 // basic components
 @import "styles/components/header";
 @import "styles/components/footer";
 @import "styles/components/carousel";
 @import "styles/components/nav-dropdown";
+@import "styles/components/section";
 
 //pages
 @import "styles/pages/home--hero";
 @import "styles/pages/home--about";
-@import "styles/pages/section";
+@import "styles/pages/section-events";

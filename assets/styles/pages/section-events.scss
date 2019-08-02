@@ -1,0 +1,122 @@
+$events-table-grid: 4.4rem 2.5fr 1.4fr 2fr 1fr;
+.events-section {
+  @extend .section;
+}
+.events-date {
+  margin-bottom: .9em;
+  &:first-of-type {
+    margin-bottom: -.5rem;
+    margin-top: 5vh;
+  }
+//  margin-top: 4vh;
+}
+.events-table {
+  margin: 0;
+  margin-bottom: 5vh;
+  padding: 0;
+
+  //&:not(:first-of-type) { margin-top: 3vh; }
+}
+.events-table-head {
+  display: grid;
+  grid-template-columns: $events-table-grid;
+  color: $color-base-light;
+  font-size: 0.8em;
+  border-bottom: solid 1px $color-outline;
+
+  div {
+    padding-bottom: .5rem;
+  }
+}
+.events-table-head--participants { text-align: right; }
+
+.events-table--row {
+  display: grid;
+  grid-template-columns: $events-table-grid;
+  line-height: 1.4em;
+  margin-top: 1rem;
+
+  @include for-desktop-up { font-size: 1em;}
+  @include for-desktop-down { font-size: 0.95em;}
+  @include for-phone-only {}
+
+  div {
+//    border: solid 1px $color-outline;
+  }
+}
+.events-table--col-date         {
+  font-weight: bold;
+}
+.events-table--col-title        {
+  display: flex;
+}
+.events-table--col-departure    {
+  border-bottom: solid 1px $color-outline;
+}
+.events-table--col-activity     {
+  border-bottom: solid 1px $color-outline;
+}
+.events-table--col-participants {
+  border-bottom: solid 1px $color-outline;
+  text-align: right;
+}
+
+.events-table--duration {
+  color: $color-base-light;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.events-table--cover {
+  width: 4rem;
+  height: 4rem;
+  background: $color-back;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.events-table--title-container {
+  margin-left: .7rem;
+}
+
+.events-table--title {
+  margin: 0;
+  font-size: 1rem;
+}
+.events-table--transport {
+}
+
+.text-separator {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+
+  &:before {
+    content: '•';
+    color: $color-base-light;
+    font-size: 0.6em;
+    position: relative;
+    bottom: .1rem;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.events-table--availability-have-places {
+  color: $color-brand;
+}
+
+.events-table--availability-full {
+  color: $color-muted;
+}
+
+.events-table--availability-default {
+  color: $color-base;
+}
+
+.events-table--availability-waiting {
+  color: $color-muted;
+  font-style: italic;
+}

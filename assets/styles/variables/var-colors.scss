@@ -17,11 +17,12 @@
 //TODO remove
   $color-brand: #00AD7D;
   $color-base: #2F363B;
+  $color-base-light: rgba($color-base, .75);//#546068;
+  $color-muted: #818790;
   $white: #ffffff;
-  $color-muted: #606F78;
   $color-link: $color-brand;
-  $color-outline: #C5CFDC;
-  $color-back: #F5F8FB;
+  $color-outline: #E1E4EB;
+  $color-back: #F2F3F6;
   $link-hover-color: $color-link;
   $secondary-grey: #ced4da;
   $secondary-dark-grey: #646f7c;

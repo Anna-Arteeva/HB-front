@@ -23,11 +23,16 @@ $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 
 
-$section-padding-v:    calc(5vh + (5 * (1vw - 5px)));
-$section-padding-v-sm: calc(1.8vh + (2.3 * (1vw - 5px)));
-$section-padding-v-xs: calc(2vh + (1.5 * (1vw - 2px)));
+$section-padding-v:    calc(6vh);
+$section-padding-v-sm: calc(4vh);
+$section-padding-v-xs: calc(3vh);
 
 $padding-h:            calc(3.2vw + .2rem);
+
+$section-width-desktop: calc(100% - 6vw);
+$section-max-width-desktop: 100rem;
+$section-width-small: 100vw;
+$section-width-sides-desktop: 3vw;
 
 
 $s1: .4rem;

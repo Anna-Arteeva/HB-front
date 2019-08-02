@@ -89,3 +89,10 @@
 .header-button {
   margin-left: 4px;
 }
+
+.header-full {
+  @extend .header;
+  margin-top: 3vh;
+  margin-right: $section-width-sides-desktop;
+  margin-left: $section-width-sides-desktop;
+}

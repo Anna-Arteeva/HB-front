@@ -1,16 +1,23 @@
-.section {
-  margin:           auto;
-  padding:          $section-padding-v-sm 3vw;
-  position:         relative;
+
+
+.section-breakpoints {
+  margin-left:           auto;
+  margin-right:          auto;
 
   @include for-desktop-up {
-    width: calc(100% - 6vw);
-    max-width: 100rem;
+    width: $section-width-desktop;
+    max-width: $section-max-width-desktop;
   }
 
   @include for-tablet-portrait-down {
-    width: 100vw;
+    width: $section-width-small;
   }
+}
+
+.section {
+  @extend .section-breakpoints;
+  padding:          $section-padding-v-sm  $section-width-sides-desktop;
+  position:         relative;
 }
 
 .section--content {
@@ -25,12 +32,6 @@
   @include for-tablet-portrait-up {
     border-radius: var(--border-radius-md);
   }
-}
-
-.dark-section {
-  @extend .section-back;
-  color: white;
-  background-color: $color-base;
 }
 
 
@@ -57,11 +58,4 @@
     color:               var(--color-brand-variation);
     border-bottom-color: var(--color-brand-variation);
   }
-}
-
-.section-container {
-  @extend .section;
-  margin:           auto;
-//  padding:          $padding-v 3vw;
-  position:         relative;
 }
