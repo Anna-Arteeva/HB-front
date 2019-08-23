@@ -60,20 +60,42 @@
 </section>
 
 <section class="events-section">
-    <h1 class="display-3">
-        Upcoming events
+    <h1 class="display-3">Events
     </h1>
 
-    <h3 class="events-date">
-        Tomorrow, July 19
-    </h3>
+    <div class="events-nav">
+        <h3 class="events-date-dropdown dropdown">
+            Tomorrow, July 19 +
+            <div class="events-dropdown-content">
+                <a class="events-dropdown--link" href="#">
+                    Past
+                </a>
+                <a class="events-dropdown--link" href="#">
+                    Today
+                </a>
+                <a class="events-dropdown--link active" href="#">
+                    Upcoming
+                </a>
+            </div>
+        </h3>
+
+        <div>
+            <a class="header-button button button-gray button-xs button-outline" href="#">
+                Previous week
+            </a>
+            <a class="header-button button button-gray button-xs button-outline" href="#">
+                Previous week
+            </a>
+        </div>
+    </div>
+
     <ul class="events-table">
         <li class="events-table-head">
+            <div>Time</div>
             <div></div>
-            <div></div>
-            <div>Departing from</div>
-            <div>Activity</div>
-            <div class="events-table-head--people">people</div>
+            <div class="events-table--area-departure">Departing from</div>
+            <div class="events-table--area-activity">Activity</div>
+            <div class="events-table--area-people">People</div>
         </li>
         <li class="events-table--row">
             <div class="events-table--area-date">
@@ -395,7 +417,15 @@
             </div>
         </li>
     </ul>
-    Pagination
+
+    <div class="events-pagination">
+        <a class="header-button button button-gray button-xs button-outline" href="#">
+            Previous week
+        </a>
+        <a class="header-button button button-gray button-xs button-outline" href="#">
+            Previous week
+        </a>
+    </div>
 </section>
 </body>
 </html>

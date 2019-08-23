@@ -1,0 +1,129 @@
+// Used https://milligram.io framework
+// Button
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: $color-brand;
+  border: 1px solid $color-brand;
+  color: $white;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1em;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 3em;
+
+  &:focus,
+  &:hover {
+    background-color: darken($color-brand, 10%);
+    border-color: darken($color-brand, 10%);
+    color: $white;
+    outline: 0;
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+
+    &:focus,
+    &:hover {
+      background-color: $color-brand;
+      border-color: $color-brand;
+    }
+  }
+
+  &.button-outline {
+    background-color: transparent;
+    color: $color-brand;
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      border-color: darken($color-brand, 10%);
+      color: darken($color-brand, 10%);
+    }
+
+    &[disabled] {
+      &:focus,
+      &:hover {
+        border-color: inherit;
+        color: $color-brand;
+      }
+    }
+  }
+
+  &.button-clear {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color-brand;
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: darken($color-brand, 10%);
+    }
+
+    &[disabled] {
+      &:focus,
+      &:hover {
+        color: $color-brand;
+      }
+    }
+  }
+
+  &.button-sm {
+    font-size: 1em;
+    height: 2.2em;
+    line-height: 2em;
+
+    //letter-spacing: .1em
+    padding: 0 0.5em;
+  }
+
+  &.button-xs {
+    font-size: 0.9em;
+    height: 2.4em;
+    line-height: 2.4em;
+    padding: 0 0.5em;
+  }
+
+  &.button-lg {
+    font-size: 1.3em;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 1em;
+  }
+}
+
+.button-gray {
+  background-color: $color-outline;
+  border: 1px solid $color-outline;
+  color: $color-base-light;
+
+  &:focus,
+  &:hover {
+    background-color: $color-outline;
+    border-color: darken($color-outline, 10%);
+  }
+
+  &.button-outline {
+    color: $color-base-light;
+
+    &:focus,
+    &:hover {
+      background-color: $color-outline;
+      color: $color-base-light;
+      border: 1px solid $color-outline;
+    }
+  }
+}

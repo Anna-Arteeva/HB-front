@@ -1,0 +1,24 @@
+//sass --watch assets/styles/_bundle.scss:bundle.css
+
+@import "base/normalize";
+@import 'variables/variables';
+@import 'mixins/responsive';
+
+// common
+@import "base/font-muli";
+@import "base/body";
+@import "base/typography";
+@import "base/button";
+
+// basic components
+@import "components/header";
+@import "components/footer";
+@import "components/carousel";
+@import "components/nav-dropdown";
+@import "components/section";
+
+//pages
+@import "pages/home--hero";
+@import "pages/home--about";
+@import "pages/events-nav";
+@import "pages/events-table";

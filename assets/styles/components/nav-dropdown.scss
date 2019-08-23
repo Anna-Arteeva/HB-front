@@ -27,11 +27,12 @@
   padding: .75rem;
   color: var(--color-base);
   text-decoration: none;
-  display: inline-block;
+  display: block;
 
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &.active {
     color: var(--color-brand);
   }
 }

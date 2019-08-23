@@ -61,14 +61,6 @@
 
 .events-date {
   margin-bottom: .9em;
-
-  &:first-of-type {
-    margin-top: 5vh;
-
-    @include for-tablet-portrait-up {//optimise for the head row which is hidden on phones
-      margin-bottom: -.5rem;
-    }
-  }
 }
 
 .events-table {
@@ -81,7 +73,8 @@
   @extend .events-table--grid;
   color: $color-base-light;
   font-size: 0.8em;
-  border-bottom: solid 1px $color-outline;
+  margin-top: 4vh;
+  //border-bottom: solid 1px $color-outline;
   div {
     padding-bottom: .5rem;
   }
@@ -89,7 +82,6 @@
   @include for-phone-only {display: none;}
 
 }
-.events-table-head--people { text-align: right; }
 
 .events-table--row {
   @extend .events-table--grid;
