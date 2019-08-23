@@ -3,8 +3,7 @@
   margin-top: 4vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-bottom: .5rem;
+  align-items: stretch;
 }
 
 
@@ -13,15 +12,35 @@
   text-decoration: none;
   display: inline-block;
   margin: 0;
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+  padding-right: 3rem;
+
+  &:focus,
+  &:hover {
+    color: $color-brand;
+  }
 
   @include for-phone-only {
     padding-bottom: .8rem;
   }
 }
 
+.events-date-dropdown-angle {
+  fill: $color-base;
+  position: relative;
+  top: .1rem;
+  left: .3rem;
+
+  &:focus,
+  &:hover {
+    fill: $color-brand;
+  }
+}
+
 .events-dropdown-content {
   @extend .dropdown-content;
-  top: 2.2rem;
+  top: 2.8rem;
   border-top: solid 1px $color-brand;
 }
 

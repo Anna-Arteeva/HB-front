@@ -15,7 +15,8 @@
 }
 
 .header--logo {
-  padding-top: 11px;
+  padding-top: 6px;
+  @include for-tablet-portrait-up {padding-top: 11px;}
 }
 
 .header-right {
@@ -34,6 +35,8 @@
     left: 0;
     bottom: 0;
     max-width: calc(100vw - 2 * #{$padding-h});
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -49,6 +52,7 @@
 
   @include for-phone-only {
     padding-bottom: .8rem;
+    font-size: .8em;
   }
 
   &:hover,
@@ -86,6 +90,12 @@
 
 .header-button {
   margin-left: 4px;
+
+  @include for-phone-only {
+    font-size: 0.8em !important;
+    height: 2em !important;
+    line-height: 2em !important;
+  }
 }
 
 .header-full {
