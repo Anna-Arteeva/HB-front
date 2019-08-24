@@ -712,22 +712,15 @@ input[type='submit'] {
 .header--logo {
   margin-top: -2px;
   padding-right: 1rem; }
-  @media (max-width: calc(900px - 1px)) {
+  @media (max-width: calc(1200px - 1px)) {
     .header--logo {
       display: none; } }
 
 .header--logo-mobile {
   display: none; }
-  @media (max-width: calc(900px - 1px)) {
+  @media (max-width: calc(1200px - 1px)) {
     .header--logo-mobile {
       display: inherit; } }
-
-@media (max-width: calc(1200px - 1px)) {
-  .header .header--logo, .header-full .header--logo {
-    display: none; } }
-@media (max-width: calc(1200px - 1px)) {
-  .header .header--logo-mobile, .header-full .header--logo-mobile {
-    display: inherit; } }
 
 .footer {
   position: absolute;
