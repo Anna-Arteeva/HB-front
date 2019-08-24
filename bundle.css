@@ -1053,7 +1053,8 @@ input[type='submit'] {
 
 .events-dropdown-content {
   top: 2.8rem;
-  border-top: solid 1px #00AD7D; }
+  border-top: solid 1px #00AD7D;
+  font-size: 1rem; }
 
 .events-pagination {
   display: flex;
