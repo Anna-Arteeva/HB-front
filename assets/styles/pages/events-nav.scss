@@ -1,9 +1,22 @@
 .events-nav {
-  border-bottom: solid 1px $color-outline;
   margin-top: 4vh;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  flex-wrap: wrap;
+
+  @include for-tablet-portrait-up {
+    border-bottom: solid 1px $color-outline;
+  }
+
+  @include for-phone-only {
+    position: relative;
+    .events-pagination {
+      position: absolute;
+      right: 0;
+      top: calc(-4vh - 1.6rem);
+    }
+  }
 }
 
 
@@ -13,16 +26,13 @@
   display: inline-block;
   margin: 0;
   padding-top: .5rem;
-  padding-bottom: 1rem;
   padding-right: 3rem;
+
+  @include for-tablet-portrait-up { padding-bottom: 1rem; }
 
   &:focus,
   &:hover {
     color: $color-brand;
-  }
-
-  @include for-phone-only {
-    padding-bottom: .8rem;
   }
 }
 

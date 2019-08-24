@@ -8,7 +8,7 @@
 }
 .events-table--area-departure    {
   grid-area: departure;
-  @include for-tablet-landscape-up {border-bottom: solid 1px $color-outline;}
+  @include for-tablet-portrait-up {border-bottom: solid 1px $color-outline;}
 
   @include for-phone-only {
     div { display: inline-block; }
@@ -16,7 +16,7 @@
 }
 .events-table--area-activity     {
   grid-area: activity;
-  @include for-tablet-landscape-up {border-bottom: solid 1px $color-outline;}
+  @include for-tablet-portrait-up {border-bottom: solid 1px $color-outline;}
   @include for-phone-only {
     padding-top:    .7rem;
     padding-bottom: .7rem;
@@ -24,7 +24,7 @@
 }
 .events-table--area-people {
   grid-area: people;
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     border-bottom: solid 1px $color-outline;
     text-align: right;
   }
@@ -60,7 +60,11 @@
 }
 
 .events-date {
-  margin-bottom: .9em;
+  @include for-tablet-portrait-up {
+    padding-bottom: .8em;
+    margin-bottom: .2em;
+    border-bottom: solid 1px $color-outline;
+  }
 }
 
 .events-table {
@@ -115,6 +119,7 @@
     display: block;
     width: 4rem;
     height: 4rem;
+    flex-shrink: 0;
     background: $color-back;
     border-radius: var(--border-radius-md);
     overflow: hidden;
@@ -142,20 +147,28 @@
     font-weight: bold;
   }
 }
+.events-table--activity-specs {
+  @extend .text-secondary;
+  //line-height: 1.2em;
+}
 
 .events-table--availability-have-places {
+  white-space: nowrap;
   color: $color-brand;
 }
 
 .events-table--availability-full {
+  white-space: nowrap;
   color: $color-muted;
 }
 
 .events-table--availability-default {
+  white-space: nowrap;
   color: $color-base;
 }
 
 .events-table--availability-waiting {
+  white-space: nowrap;
   color: $color-muted;
   font-style: italic;
 }

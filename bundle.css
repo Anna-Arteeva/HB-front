@@ -462,7 +462,7 @@ a {
 .strong {
   font-weight: 600; }
 
-.text-secondary, .events-table--duration, .events-table--organiser, .events-table--transport, .phone-only {
+.text-secondary, .events-table--duration, .events-table--organiser, .events-table--transport, .events-table--activity-specs, .phone-only {
   color: rgba(47, 54, 59, 0.75);
   font-size: 0.9em; }
 
@@ -1023,11 +1023,21 @@ input[type='submit'] {
       right: -5vw; } }
 
 .events-nav {
-  border-bottom: solid 1px #EAEEF3;
   margin-top: 4vh;
   display: flex;
   justify-content: space-between;
-  align-items: stretch; }
+  align-items: stretch;
+  flex-wrap: wrap; }
+  @media (min-width: 600px) {
+    .events-nav {
+      border-bottom: solid 1px #EAEEF3; } }
+  @media (max-width: 599px) {
+    .events-nav {
+      position: relative; }
+      .events-nav .events-pagination {
+        position: absolute;
+        right: 0;
+        top: calc(-4vh - 1.6rem); } }
 
 .events-date-dropdown {
   color: var(--color-base);
@@ -1035,13 +1045,12 @@ input[type='submit'] {
   display: inline-block;
   margin: 0;
   padding-top: .5rem;
-  padding-bottom: 1rem;
   padding-right: 3rem; }
+  @media (min-width: 600px) {
+    .events-date-dropdown {
+      padding-bottom: 1rem; } }
   .events-date-dropdown:focus, .events-date-dropdown:hover {
     color: #00AD7D; }
-  @media (max-width: 599px) {
-    .events-date-dropdown {
-      padding-bottom: .8rem; } }
 
 .events-date-dropdown-angle {
   fill: #2F363B;
@@ -1070,7 +1079,7 @@ input[type='submit'] {
 
 .events-table--area-departure {
   grid-area: departure; }
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     .events-table--area-departure {
       border-bottom: solid 1px #EAEEF3; } }
   @media (max-width: 599px) {
@@ -1079,7 +1088,7 @@ input[type='submit'] {
 
 .events-table--area-activity {
   grid-area: activity; }
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     .events-table--area-activity {
       border-bottom: solid 1px #EAEEF3; } }
   @media (max-width: 599px) {
@@ -1089,7 +1098,7 @@ input[type='submit'] {
 
 .events-table--area-people {
   grid-area: people; }
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     .events-table--area-people {
       border-bottom: solid 1px #EAEEF3;
       text-align: right; } }
@@ -1110,8 +1119,11 @@ input[type='submit'] {
       grid-template-rows: 1fr;
       grid-template-areas: "time title" "time departure" "time activity" "time people"; } }
 
-.events-date {
-  margin-bottom: .9em; }
+@media (min-width: 600px) {
+  .events-date {
+    padding-bottom: .8em;
+    margin-bottom: .2em;
+    border-bottom: solid 1px #EAEEF3; } }
 
 .events-table {
   margin: 0;
@@ -1154,6 +1166,7 @@ input[type='submit'] {
       display: block;
       width: 4rem;
       height: 4rem;
+      flex-shrink: 0;
       background: #F2F3F6;
       border-radius: var(--border-radius-md);
       overflow: hidden;
@@ -1174,15 +1187,19 @@ input[type='submit'] {
     font-weight: bold; } }
 
 .events-table--availability-have-places {
+  white-space: nowrap;
   color: #00AD7D; }
 
 .events-table--availability-full {
+  white-space: nowrap;
   color: rgba(47, 54, 59, 0.6); }
 
 .events-table--availability-default {
+  white-space: nowrap;
   color: #2F363B; }
 
 .events-table--availability-waiting {
+  white-space: nowrap;
   color: rgba(47, 54, 59, 0.6);
   font-style: italic; }
 
