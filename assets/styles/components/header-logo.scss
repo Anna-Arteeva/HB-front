@@ -1,21 +1,9 @@
 .header--logo {
   margin-top: -2px;
   padding-right: 1rem;
-  @include for-tablet-landscape-down { display: none; }
+  @include for-desktop-down  { display: none; }
 }
 .header--logo-mobile {
   display: none;
-  @include for-tablet-landscape-down { display: inherit; }
-}
-
-.header {
-  .header--logo {
-    @include for-desktop-down {
-      display: none;
-    }
-  }
-
-  .header--logo-mobile {
-    @include for-desktop-down { display: inherit; }
-  }
+  @include for-desktop-down  { display: inherit; }
 }
