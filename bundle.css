@@ -725,10 +725,16 @@ input[type='submit'] {
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: rgba(47, 54, 59, 0.7);
-  font-size: .9rem; }
+  font-size: .9rem;
+  line-height: 1.4em; }
   @media (max-width: 599px) {
     .footer {
       flex-direction: column; } }
+
+.footer-list {
+  display: inline-block; }
+  .footer-list > * {
+    padding-left: .6rem; }
 
 .footer-link {
   color: rgba(47, 54, 59, 0.7); }
