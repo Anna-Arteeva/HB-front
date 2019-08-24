@@ -4,6 +4,7 @@
   align-items: flex-start;
   border-bottom: $border;
   position: relative;
+  flex-wrap: wrap;
 
   margin-top:     $section-padding-v-sm;
 
@@ -12,11 +13,6 @@
     height: 6rem;
   }
  // padding-bottom: 16px;
-}
-
-.header--logo {
-  padding-top: 6px;
-  @include for-tablet-portrait-up {padding-top: 11px;}
 }
 
 .header-right {
