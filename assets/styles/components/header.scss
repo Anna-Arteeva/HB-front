@@ -77,11 +77,31 @@
 .header--profile {
   height: 38px;
   min-width:  38px;
+  position: relative;
 
   background: var(--color-outline);
+  background-position: center;
+  background-size: cover;
   border-radius: var(--border-radius-lg);
 
   margin-left: 4px;
+}
+
+.header--profile-no-photo {
+  &:before {
+    content: '';
+    background-image: url('assets/images/fontawesome/solid/user.svg');
+    background-position: center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 38px;
+    min-width:  38px;
+    opacity: .2;
+    background-blend-mode: multiply;
+  }
 }
 
 .header-button {
