@@ -12,7 +12,6 @@
 
   @include for-tablet-portrait-down {
     grid-template-rows: 1fr 1fr;
-    margin: $padding-h;
   }
 }
 

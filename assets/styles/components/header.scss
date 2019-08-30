@@ -45,6 +45,7 @@
   margin: 0 16px -1px 0;
 
   padding-bottom: 24px;
+  white-space: nowrap;
 
   @include for-phone-only {
     padding-bottom: .8rem;
@@ -62,9 +63,10 @@
 
 
 .header--search {
-
+@extend .form;
   height: 38px;
   min-width:  38px;
+  padding: .5rem .7rem;
 
   background: var(--color-outline);
   border-radius: var(--border-radius-lg);
