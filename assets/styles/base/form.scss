@@ -14,13 +14,21 @@
 .form {
   appearance: none;
   background-color: transparent;
-  border: 0.1rem solid $color-outline;
-  border-radius: 0.4rem;
+  border: $border;
+  border-radius: $border-radius;
   box-shadow: none;
   box-sizing: inherit;
   height: 3.8rem;
   padding: 0.6rem 1rem;
-  width: 100%; }
+  width: 100%;
+
+  &.form-sm {
+    font-size: 1em;
+    height: 2.2em;
+    line-height: 2em;
+    padding: 0 0.5em;
+  }
+}
   input[type='email']:focus,
   input[type='number']:focus,
   input[type='password']:focus,

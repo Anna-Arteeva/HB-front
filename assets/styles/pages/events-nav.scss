@@ -64,3 +64,13 @@
   display: flex;
   justify-content: flex-end;
 }
+.events-search {
+  flex-grow: 1;
+  justify-content: flex-end;
+  text-align: right;
+}
+.events-search-input {
+  @extend .form;
+  @extend .form-sm;
+  width: inherit;
+}
