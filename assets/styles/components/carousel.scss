@@ -70,10 +70,14 @@
 
   .carousel--title,
   .carousel--subtitle {
-    color: white;
+    //color: white;
+    background: white;
+    padding: .1rem .2rem;
+    border-radius: .1rem;
+
 
     &.link {
-      color: var(--color-brand);
+      color: $color-base;
     }
   }
 }
@@ -95,7 +99,7 @@
     left: 0;
     right: 0;
     z-index: 0;
-    background: rgba(black, .4);
+    //background: rgba(black, .4);
   }
 }
 
