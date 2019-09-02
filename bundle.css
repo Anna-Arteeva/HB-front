@@ -790,6 +790,9 @@ input[type='radio'] {
   margin-right: 3vw;
   margin-left: 3vw; }
 
+.header-home .header--search {
+  display: none; }
+
 .header--logo {
   margin-top: -2px;
   padding-right: 1rem; }
