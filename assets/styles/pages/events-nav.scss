@@ -10,15 +10,22 @@
   }
 
   @include for-phone-only {
+    margin-top: 8vh;
     position: relative;
     .events-pagination {
       position: absolute;
       right: 0;
-      top: calc(-4vh - 1.6rem);
+   //   top: calc(-4vh - 1.6rem);
+      top: .3rem
     }
   }
 }
 
+.events-headline {
+  @include for-phone-only {
+    display: none;
+  }
+}
 
 .events-date-dropdown {
   color: var(--color-base);
@@ -34,6 +41,16 @@
   &:hover {
     color: $color-brand;
   }
+
+  @include for-tablet-portrait-down {
+    &:focus,
+    &:hover {
+      color: inherit;
+    }
+   // &:hover .dropdown-content {
+   //   display: none !important; //do not show dropdown on mobile
+   // }
+  }
 }
 
 .events-date-dropdown-angle {
@@ -46,7 +63,13 @@
   &:hover {
     fill: $color-brand;
   }
+
+  @include for-tablet-portrait-down {
+    display: none;
+  }
+
 }
+
 
 .events-dropdown-content {
   @extend .dropdown-content;
@@ -54,6 +77,24 @@
   border-top: solid 1px $color-brand;
   font-size: 1rem;
   z-index: 10;
+
+  @include for-tablet-portrait-down {
+    top: -3.5rem;
+    background: none;
+    border: 0;
+    box-shadow: inherit;
+
+    display: flex !important;
+    flex-direction: row-reverse;
+    width: inherit;
+    margin: 0;
+    padding: 0;
+    left: -.7rem;
+
+    a {
+      font-weight: bold;
+    }
+  }
 }
 
 .events-dropdown--link {
@@ -66,11 +107,21 @@
 }
 .events-search {
   flex-grow: 1;
-  justify-content: flex-end;
-  text-align: right;
+  @include for-tablet-portrait-up {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  @include for-phone-only {
+    margin-top: .8rem;
+    width: 100%;
+    display: none;
+  }
 }
+
 .events-search-input {
   @extend .form;
   @extend .form-sm;
   width: inherit;
+
+  @include for-phone-only {}
 }

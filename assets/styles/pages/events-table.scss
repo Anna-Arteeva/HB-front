@@ -129,6 +129,13 @@
   &:active {
     background: rgba($color-base, .05 );
   }
+
+  @include for-tablet-portrait-down {
+    left:   -.8rem;
+    right:  -.8rem;
+    top: 0;
+    bottom: -1rem;
+  }
 }
 
 .events-table--duration {

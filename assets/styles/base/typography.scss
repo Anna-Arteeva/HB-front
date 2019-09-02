@@ -10,6 +10,10 @@ h2, .h2 {
   font-size: calc(1.1875rem + ((1vw - 4.8px) * 0.9028));
 }
 
+h3, .h3 {
+  font-size: calc(.9rem + ((1vw - 0.3rem) * 0.1111));
+}
+
 h6, .h6 {
   font-size: calc(1rem + ((1vw - 4.8px) * 0.1389));
 }
