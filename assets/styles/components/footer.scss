@@ -26,6 +26,7 @@
 
 .footer-link {
   color: rgba($color-base,.7);
+  white-space: nowrap;
 }
 
 .footer--toggle {
@@ -41,3 +42,5 @@
   color: var(--color-base);
   text-decoration: none;
 }
+
+

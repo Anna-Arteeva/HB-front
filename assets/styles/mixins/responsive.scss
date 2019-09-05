@@ -45,3 +45,13 @@ $big-desktop:       1800px;
 @mixin for-big-desktop-down {
   @media (max-width: calc(#{$big-desktop} - 1px)) { @content; }
 }
+
+.hidden-phone {
+  @include for-phone-only {
+    display: none !important;
+  }
+}
+
+.display-none {
+    display: none !important;
+}
