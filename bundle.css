@@ -998,6 +998,7 @@ input[type=radio] {
   }
   .carousel-grid-5 > * {
     margin: 0 !important;
+    width: inherit !important;
   }
 }
 
