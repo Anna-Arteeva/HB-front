@@ -1,0 +1,41 @@
+.badge {
+  color: white;
+
+  display: inline-block;
+  border-radius: $border-radius;
+  font-size: .8em;
+  padding: .1em .2em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.badge-1 { //very easy
+  @extend .badge;
+  background-color: $sac-1;
+}
+
+.badge-2 { // easy
+  @extend .badge;
+  background-color: $sac-2;
+}
+
+.badge-3 { // medium
+  @extend .badge;
+  background-color: $sac-3;
+}
+
+.badge-4 { // difficult
+  @extend .badge;
+  background-color: $sac-4;
+}
+
+.badge-5 { // very difficult
+  @extend .badge;
+  background-color: $sac-5;
+}
+
+.badge-6 { // very every difficult :-)
+  @extend .badge;
+  background-color: $sac-6;
+}
+

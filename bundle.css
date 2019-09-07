@@ -804,6 +804,40 @@ input[type=radio] {
 }
 
 /*# sourceMappingURL=form.scss.map */
+.badge, .badge-6, .badge-5, .badge-4, .badge-3, .badge-2, .badge-1 {
+  color: white;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 0.8em;
+  padding: 0.1em 0.2em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.badge-1 {
+  background-color: #FFB400;
+}
+
+.badge-2 {
+  background-color: #FF4A33;
+}
+
+.badge-3 {
+  background-color: #FF3366;
+}
+
+.badge-4 {
+  background-color: #00B0FF;
+}
+
+.badge-5 {
+  background-color: #0078BB;
+}
+
+.badge-6 {
+  background-color: #0059A2;
+}
+
 .header, .header-full {
   display: flex;
   justify-content: space-between;
