@@ -1024,14 +1024,13 @@ input[type=radio] {
   display: flex;
   flex-wrap: wrap;
 }
-
 @media (min-width: 900px) {
-  .carousel-grid-5 {
+  .carousel, .home--hero--carousel {
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     grid-column-gap: 1rem;
   }
-  .carousel-grid-5 > * {
+  .carousel > *, .home--hero--carousel > * {
     margin: 0 !important;
     width: inherit !important;
   }
@@ -1046,11 +1045,6 @@ input[type=radio] {
   height: 11.5vw;
   min-height: 10rem;
   text-decoration: none;
-}
-@media (min-width: 900px) {
-  .carousel--item, .carousel--item--lg, .carousel--item--outside, .carousel--item--inside, .carousel--item--inside--lg {
-    min-width: 10rem;
-  }
 }
 @media (max-width: calc(900px - 1px)) {
   .carousel--item, .carousel--item--lg, .carousel--item--outside, .carousel--item--inside, .carousel--item--inside--lg {
@@ -1358,7 +1352,7 @@ input[type=radio] {
 
 @media (min-width: 900px) {
   .home--hero--carousel {
-    margin-right: -24vw;
+    margin-right: -10vw;
     margin-bottom: 2rem;
   }
 }
@@ -1369,7 +1363,7 @@ input[type=radio] {
 @media (min-width: 600px) {
   .home--about {
     grid-template-columns: 1fr 2fr;
-    padding-bottom: 6vh !important;
+    padding-bottom: 10vh !important;
   }
 }
 @media (max-width: calc(600px - 1px)) {

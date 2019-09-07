@@ -7,7 +7,7 @@
 
   @include for-tablet-portrait-up {
     grid-template-columns: 1fr 2fr;
-    padding-bottom: 6vh !important; //compensate for the moved-down image
+    padding-bottom: 10vh !important; //compensate for the moved-down image
   }
 
   @include for-tablet-portrait-down {

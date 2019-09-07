@@ -1,20 +1,14 @@
 .carousel {
-  margin-top:    $section-padding-v-sm;
+  margin-top:  $section-padding-v-sm;
   padding-bottom: 0;
   position: relative;
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
 
-//  overflow-scrolling: auto;
-//  overflow-y: auto;
-  //max-width: calc(100vw - 2* #{$padding-h});
-}
-
-.carousel-grid-5 {
-  @include for-tablet-landscape-up {
+  @include for-tablet-landscape-up { //grid layout for bigger screens
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat( auto-fit,  minmax(6rem, 1fr) );
     grid-column-gap: 1rem;
 
     > * {
@@ -37,10 +31,6 @@
 
   text-decoration: none;
 
-  @include for-tablet-landscape-up {
-    min-width:    10rem;
-  }
-
   @include for-tablet-landscape-down {
     flex-basis: calc(47vw - .5rem);
 
@@ -57,7 +47,6 @@
   color: var(--color-base);
   text-decoration: none;
   font-size: $h5-font-size ;
-
 }
 
 .carousel--subtitle {
