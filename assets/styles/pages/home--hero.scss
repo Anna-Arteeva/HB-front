@@ -63,16 +63,11 @@
 }
 
 .home--hero--search {
-  height: 38px;
+  @extend .form;
   width:  520px;
   max-width: 90vw;
-
-  background: var(--color-outline);
-  border-radius: var(--border-radius-lg);
-  border: 0;
-
-  margin-top: 16px;
-  padding: 1rem .4rem;
+  margin-top: 2vh;
+  background-color: $color-back;
 }
 
 .home--hero--carousel {

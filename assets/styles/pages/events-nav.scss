@@ -51,6 +51,4 @@
   @extend .form;
   @extend .form-sm;
   width: inherit;
-
-  @include for-phone-only {}
 }

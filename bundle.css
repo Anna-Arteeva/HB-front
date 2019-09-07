@@ -735,18 +735,18 @@ input[type=submit].button-lg {
   left: 0.3rem;
 }
 
-.form, .events-search-input, .header--search {
+.form, .events-search-input, .home--hero--search, .header--search {
   appearance: none;
   background-color: transparent;
   border: 1px solid #EAEEF3;
   border-radius: var(--border-radius-lg);
   box-shadow: none;
   box-sizing: inherit;
-  height: 3.8rem;
+  height: 3em;
   padding: 0.6rem 1rem;
   width: 100%;
 }
-.form.form-sm, .events-search-input, .form-sm.header--search {
+.form.form-sm, .events-search-input, .form-sm.home--hero--search, .form-sm.header--search {
   font-size: 1em;
   height: 2.2em;
   line-height: 2em;
@@ -1350,14 +1350,10 @@ input[type=radio] {
 }
 
 .home--hero--search {
-  height: 38px;
   width: 520px;
   max-width: 90vw;
-  background: var(--color-outline);
-  border-radius: var(--border-radius-lg);
-  border: 0;
-  margin-top: 16px;
-  padding: 1rem 0.4rem;
+  margin-top: 2vh;
+  background-color: #F2F3F6;
 }
 
 @media (min-width: 900px) {
@@ -1475,6 +1471,7 @@ input[type=radio] {
 .events-search-input {
   width: inherit;
 }
+
 .events-table--area-date {
   grid-area: time;
   font-weight: bold;
