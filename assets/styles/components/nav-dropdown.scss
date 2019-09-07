@@ -17,6 +17,10 @@
   border-bottom-right-radius: var(--border-radius-md);
   // display: flex;
   // flex-direction: column;
+
+   @include for-phone-only {
+     top: 1.7rem;
+   }
 }
 
 .dropdown:hover .dropdown-content {
@@ -41,5 +45,31 @@
   &:active,
   &.active {
     cursor: default;
+  }
+}
+
+//TODO Ugly Hack
+
+.dropdown-content-header-profile {
+  top: 2.2rem;
+  right: 0;
+  width: 130px;
+
+  @include for-tablet-landscape-up {
+    top: 3.2rem;
+  }
+}
+
+.dropdown-header-profile {
+  position: relative;
+  bottom: -1px;
+
+  @include for-tablet-landscape-up {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-bottom: 1px solid $color-brand;
+    }
   }
 }

@@ -52,14 +52,44 @@
 
                         <a class="header--link" href="#">Routes</a>
                         <a class="header--link hidden-phone" href="#">Plan route</a>
+
+
                         <a class="header--link" href="#">Blog</a>
-                        <a class="header--link strong" href="#">Organize event</a>
+
+                        <div class="header--link strong dropdown">
+                            Organize event
+                            <div class="dropdown-content">
+                                <a class="dropdown--link" href="#">
+                                    Use existing route
+                                </a>
+                                <a class="dropdown--link" href="#">
+                                    Create new route
+                                </a>
+                                <a class="dropdown--link" href="#">
+                                    Non-hiking event
+                                </a>
+                            </div>
+                        </div>
+
                     </nav>
 
                     <!---->
                     <input type="text" class="header--search" placeholder="Search" id="nameField">
-                    <a href="#" class="header--profile" style="background-image: url('assets/images/pic8.jpg')">
-                    </a>
+                    <div class="dropdown dropdown-header-profile">
+
+                        <a href="/profile-page" class="header--profile" style="background-image: url('assets/images/pic8.jpg')">
+
+                        </a>
+
+                        <div class="dropdown-content dropdown-content-header-profile">
+                            <a class="dropdown--link" href="#">
+                                Profile
+                            </a>
+                            <a class="dropdown--link" href="#">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
                     <!---->
 
                     <!----
