@@ -10,7 +10,7 @@ input[type='submit'] {
   background-color: $color-brand;
   border: 1px solid $color-brand;
   color: $white;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
@@ -42,7 +42,7 @@ input[type='submit'] {
   }
 
   &.button-outline {
-    background-color: transparent;
+    background-color: transparent !important;
     color: $color-brand;
 
     &:focus,
@@ -120,8 +120,9 @@ input[type='submit'] {
     color: $color-base-light;
 
     &:focus,
-    &:hover {
-      background-color: $color-outline;
+    &:hover,
+    &.active {
+      background-color: $color-outline !important;
       color: $color-base-light;
       border: 1px solid $color-outline;
     }

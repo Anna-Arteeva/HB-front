@@ -1,110 +1,39 @@
 .events-nav {
-  margin-top: 4vh;
+  margin-top: 2vh;
+  margin-bottom: 6vh;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
-
-  @include for-tablet-portrait-up {
-    border-bottom: solid 1px $color-outline;
-  }
-
-  @include for-phone-only {
-    margin-top: 8vh;
-    position: relative;
-    .events-pagination {
-      position: absolute;
-      right: 0;
-   //   top: calc(-4vh - 1.6rem);
-      top: .3rem
-    }
-  }
 }
 
-.events-headline {
-  @include for-phone-only {
-    display: none;
-  }
-}
-
-.events-date-dropdown {
-  color: var(--color-base);
+.events-nav--link {
+  color: $color-base-light;
   text-decoration: none;
   display: inline-block;
-  margin: 0;
-  padding-top: .5rem;
-  padding-right: 3rem;
+  font-size: .9em;
+  font-weight: bold;
 
-  @include for-tablet-portrait-up { padding-bottom: 1rem; }
+  border-bottom: 1px solid  transparent;
+  margin: 0 16px -1px 0;
 
+  padding-bottom: .6rem;
+  white-space: nowrap;
+
+  @include for-phone-only {
+    padding-bottom: .8rem;
+    font-size: .8em;
+  }
+
+  &:hover,
   &:focus,
-  &:hover {
-    color: $color-brand;
-  }
-
-  @include for-tablet-portrait-down {
-    &:focus,
-    &:hover {
-      color: inherit;
-    }
-   // &:hover .dropdown-content {
-   //   display: none !important; //do not show dropdown on mobile
-   // }
+  &:active,
+  &.active {
+    color: var(--color-brand);
+    border-bottom-color: var(--color-brand);
   }
 }
 
-.events-date-dropdown-angle {
-  fill: $color-base;
-  position: relative;
-  top: .1rem;
-  left: .3rem;
-
-  &:focus,
-  &:hover {
-    fill: $color-brand;
-  }
-
-  @include for-tablet-portrait-down {
-    display: none;
-  }
-
-}
-
-
-.events-dropdown-content {
-  @extend .dropdown-content;
-  top: 2.8rem;
-  border-top: solid 1px $color-brand;
-  font-size: 1rem;
-  z-index: 10;
-
-  @include for-tablet-portrait-down {
-    top: -3.5rem;
-    background: none;
-    border: 0;
-    box-shadow: inherit;
-
-    display: flex !important;
-    flex-direction: row-reverse;
-    width: inherit;
-    margin: 0;
-    padding: 0;
-    left: -.7rem;
-
-    a {
-      font-weight: bold;
-    }
-  }
-}
-
-.events-dropdown--link {
-  @extend .dropdown--link;
-}
-
-.events-pagination {
-  display: flex;
-  justify-content: flex-end;
-}
 .events-search {
   flex-grow: 1;
   @include for-tablet-portrait-up {
@@ -114,7 +43,7 @@
   @include for-phone-only {
     margin-top: .8rem;
     width: 100%;
-    display: none;
+   // display: none;
   }
 }
 

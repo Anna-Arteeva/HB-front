@@ -1,0 +1,15 @@
+.pagination-button {
+  @extend .button;
+  @extend .button-gray;
+  @extend .button-outline;
+  @extend .button-xs;
+
+  margin-left:  .2rem;
+  padding-right: .8em !important;
+  padding-left:  .8em !important;
+}
+
+.events-pagination {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -65,6 +65,12 @@
     margin-bottom: .2em;
     border-bottom: solid 1px $color-outline;
   }
+
+  &:first-of-type {
+    @include for-tablet-portrait-up {
+      margin-bottom: -3.1rem;
+    }
+  }
 }
 
 .events-table {
@@ -81,6 +87,7 @@
   //border-bottom: solid 1px $color-outline;
   div {
     padding-bottom: .5rem;
+    border-bottom:0;
   }
 
   @include for-phone-only {display: none;}

@@ -66,52 +66,35 @@
         Events
     </h1>
 
+
     <div class="events-nav">
-        <h3 class="events-date-dropdown dropdown">
-            Tomorrow, July 19
-            <img class="events-date-dropdown-angle" src="assets/images/fontawesome/regular/angle-down.svg"
-                                   alt="open" width="9">
-            <div class="events-dropdown-content">
-                <a class="events-dropdown--link" href="#">
-                    Past
-                </a>
-                <a class="events-dropdown--link" href="#2">
-                    Today
-                </a>
-                <a class="events-dropdown--link active" href="#">
-                    Upcoming
-                </a>
-            </div>
-        </h3>
+        <div class="events-filter">
+            <a class="events-nav--link active" href="#">
+                Upcoming
+            </a>
+
+            <a class="events-nav--link" href="#">
+                Happening Today
+            </a>
+
+            <a class="events-nav--link" href="#">
+                Past
+            </a>
+        </div>
 
         <div class="events-search">
 
             <input type="text" class="events-search-input" placeholder="Search for events" id="nameField">
         </div>
-        <div class="events-pagination">
-
-
-            <a class="header-button button button-gray button-xs button-outline" href="#">
-                <
-            </a>
-            <a class="header-button button button-gray button-xs button-outline" href="#">
-                1
-            </a>
-            <a class="header-button button button-gray button-xs button-outline" href="#">
-                2
-            </a>
-            <a class="header-button button button-gray button-xs button-outline" href="#">
-                3
-            </a>
-            <a class="header-button button button-gray button-xs button-outline" href="#">
-                >
-            </a>
-        </div>
     </div>
+
+    <h3 class="events-date">
+        Saturday, July 20
+    </h3>
 
     <div class="events-table">
         <li class="events-table-head">
-            <div>Time</div>
+            <div></div>
             <div></div>
             <div class="events-table--area-departure">Departing from</div>
             <div class="events-table--area-activity">Activity</div>
@@ -447,14 +430,29 @@
     </ul>
 
     <div class="events-pagination">
-        <a class="header-button button button-gray button-xs button-outline" href="#">
-            Previous week
-        </a>
-        <a class="header-button button button-gray button-xs button-outline" href="#">
-            Next week
-        </a>
+
+        <div class="events-pagination">
+
+
+            <a class="pagination-button " href="#">
+                <
+            </a>
+            <a class="pagination-button active disabled" href="#">
+                1
+            </a>
+            <a class="pagination-button " href="#">
+                2
+            </a>
+            <a class="pagination-button " href="#">
+                3
+            </a>
+            <a class="pagination-button " href="#">
+                >
+            </a>
+        </div>
     </div>
 </section>
+
 
 <footer class="footer section">
 
