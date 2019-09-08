@@ -1,3 +1,23 @@
+.events-date {
+  @include for-tablet-portrait-up {
+    padding-bottom: .8em;
+    margin-bottom: .2em;
+    border-bottom: solid 1px $color-outline;
+  }
+
+  &:first-of-type {
+    @include for-tablet-portrait-up {
+      margin-bottom: -1.6rem;
+    }
+  }
+}
+
+.events-table {
+  margin: 0;
+  margin-bottom: 5vh;
+  padding: 0;
+}
+
 .events-table--area-date         {
   grid-area: time;
   font-weight: bold;
@@ -30,7 +50,6 @@
   }
 }
 
-
 .events-table--grid {
   display: grid;
 
@@ -48,43 +67,18 @@
     grid-template-columns: 3.4rem 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-       "time title"
-       "time departure"
-       "time activity"
-       "time people";
+            "time title"
+            "time departure"
+            "time activity"
+            "time people";
   }
 }
 
-.events-section {
-  @extend .section;
-}
-
-.events-date {
-  @include for-tablet-portrait-up {
-    padding-bottom: .8em;
-    margin-bottom: .2em;
-    border-bottom: solid 1px $color-outline;
-  }
-
-  &:first-of-type {
-    @include for-tablet-portrait-up {
-      margin-bottom: -3.1rem;
-    }
-  }
-}
-
-.events-table {
-  margin: 0;
-  margin-bottom: 5vh;
-  padding: 0;
-}
 
 .events-table-head {
   @extend .events-table--grid;
   color: $color-base-light;
   font-size: 0.8em;
-  margin-top: 4vh;
-  //border-bottom: solid 1px $color-outline;
   div {
     padding-bottom: .5rem;
     border-bottom:0;
@@ -147,6 +141,7 @@
 
 .events-table--duration {
   @extend .text-secondary;
+  font-weight: normal;
 }
 
 .events-table--cover {
@@ -186,7 +181,6 @@
 }
 .events-table--activity-specs {
   @extend .text-secondary;
-  //line-height: 1.2em;
 }
 
 .events-table--availability-have-places {

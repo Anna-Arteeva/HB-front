@@ -1,0 +1,30 @@
+.events-grid {
+  display: grid;
+
+  grid-template-columns:  auto minmax(24rem, 24rem);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+          "nav            my-events"
+          "events-section my-events"
+          "footer         my-events";
+}
+
+// name sections for grid
+
+.section-breakpoints {
+  grid-area: nav;
+}
+
+.my-events {
+  grid-area: my-events;
+}
+
+.events-section {
+  grid-area: events-section;
+
+  @extend .section;
+}
+
+.footer {
+  grid-area: footer;
+}
