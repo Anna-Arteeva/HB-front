@@ -1,11 +1,8 @@
 .section-breakpoints {
   margin-left:           auto;
   margin-right:          auto;
-
-  @include for-desktop-up {
-    width: $section-width-desktop;
-    max-width: $section-max-width-desktop;
-  }
+  width:     100%;
+  max-width: $section-max-width-desktop;
 
   @include for-tablet-portrait-down {
     width: $section-width-small;

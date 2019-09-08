@@ -943,8 +943,17 @@ input[type=radio] {
 
 .header-full {
   margin-top: 3vh;
-  margin-right: 3vw;
-  margin-left: 3vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  border-bottom: 0;
+}
+.header-full:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 3vw;
+  right: 3vw;
+  border-bottom: 1px solid #EAEEF3;
 }
 
 .header-home .header--search {
@@ -970,18 +979,14 @@ input[type=radio] {
   }
 }
 
-.section-breakpoints, .section, .events-section, .home--about, .section-back {
+.section-breakpoints, .section, .events-section, .home--about, .section-back, .header-full {
   margin-left: auto;
   margin-right: auto;
-}
-@media (min-width: 1200px) {
-  .section-breakpoints, .section, .events-section, .home--about, .section-back {
-    width: calc(100% - 6vw);
-    max-width: 100rem;
-  }
+  width: 100%;
+  max-width: 100rem;
 }
 @media (max-width: calc(600px - 1px)) {
-  .section-breakpoints, .section, .events-section, .home--about, .section-back {
+  .section-breakpoints, .section, .events-section, .home--about, .section-back, .header-full {
     width: 100vw;
   }
 }
@@ -1419,12 +1424,12 @@ input[type=radio] {
 
 .events-grid {
   display: grid;
-  grid-template-columns: auto minmax(24rem, 24rem);
+  grid-template-columns: auto minmax(20%, 24rem);
   grid-template-rows: 1fr;
   grid-template-areas: "nav            my-events" "events-section my-events" "footer         my-events";
 }
 
-.section-breakpoints, .section, .events-section, .section-back, .home--about {
+.section-breakpoints, .header-full, .section, .events-section, .section-back, .home--about {
   grid-area: nav;
 }
 
@@ -1597,7 +1602,7 @@ input[type=radio] {
 }
 
 .events-table--row {
-  line-height: 1.4em;
+  line-height: 1.2em;
   margin-top: 1rem;
   position: relative;
 }
@@ -1615,6 +1620,11 @@ input[type=radio] {
   padding-right: 0.5rem;
 }
 @media (min-width: 1200px) {
+  .events-table--row {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 1800px) {
   .events-table--row {
     font-size: 1em;
   }
@@ -1683,6 +1693,9 @@ input[type=radio] {
   }
 }
 
+.events-table--activity-name {
+  margin-bottom: 0.2em;
+}
 @media (max-width: 599px) {
   .events-table--activity-name {
     font-weight: bold;
@@ -1718,7 +1731,7 @@ input[type=radio] {
 
 .my-events {
   background: #F2F3F6;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 0;
   border-radius: var(--border-radius-lg);
   padding: 2vh 1.5vw;
 }

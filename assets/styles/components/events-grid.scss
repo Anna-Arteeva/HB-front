@@ -1,7 +1,7 @@
 .events-grid {
   display: grid;
 
-  grid-template-columns:  auto minmax(24rem, 24rem);
+  grid-template-columns:  auto minmax(20%, 24rem);
   grid-template-rows: 1fr;
   grid-template-areas:
           "nav            my-events"

@@ -120,8 +120,22 @@
 .header-full {
   @extend .header;
   margin-top: 3vh;
-  margin-right: $section-width-sides-desktop;
-  margin-left: $section-width-sides-desktop;
+  @extend .section-breakpoints;
+
+  padding-left:   $section-width-sides-desktop;
+  padding-right:   $section-width-sides-desktop;
+
+  border-bottom: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: $section-width-sides-desktop;
+    right: $section-width-sides-desktop;
+
+    border-bottom: $border;
+  }
 }
 
 .header-home .header--search {
