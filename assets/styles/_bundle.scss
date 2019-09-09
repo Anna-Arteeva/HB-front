@@ -15,17 +15,23 @@
 
 
 // basic components
+
 @import "components/header";
 @import "components/header-logo";
-@import "components/footer";
-@import "components/carousel";
-@import "components/nav-dropdown";
 @import "components/section";
+@import "components/footer";
+@import "components/nav-dropdown";
 @import "components/pagination";
 
-//pages
-@import "pages/home--hero";
-@import "pages/home--about";
-@import "pages/events-nav";
-@import "pages/events-table";
-@import "pages/events-my-events";
+//home components
+@import "components/home--hero";
+@import "components/home--about";
+@import "components/carousel";
+
+//events page components
+@import "components/events-grid";
+@import "components/events-nav";
+@import "components/events-table";
+
+@import "components/my-events";
+

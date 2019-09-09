@@ -1,0 +1,122 @@
+.my-events {
+  background: $color-back;
+  margin: 1rem 1rem 1rem  0 ;
+  border-radius: var(--border-radius-lg);
+  padding: 2vh 1.5vw;
+}
+
+.my-events-title {
+
+  font-size: calc(1.05rem + ((1vw - 0.3rem) * 0.1111));
+}
+
+.my-events--list {
+  border-top: $border;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+
+.my-events--area-date         {
+  grid-area: time;
+  font-size: .8em;
+  color: $color-base-light;
+}
+
+.my-events--area-title        {
+  grid-area: title;
+  display: flex;
+}
+.my-events--area-departure    {
+  grid-area: departure;
+
+  @include for-phone-only {
+    div { display: inline-block; }
+  }
+}
+.my-events--area-activity     {
+  grid-area: activity;
+  padding-top:    .7rem;
+  padding-bottom: .7rem;
+  font-size: .9em;
+  line-height: 1.2em;
+}
+
+.my-events--area-people {
+  grid-area: people;
+}
+
+
+.my-events--grid {
+  display: grid;
+
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+          "time title"
+          "time departure"
+          "time activity"
+          "time people";
+}
+
+
+.my-events--row {
+  @extend .my-events--grid;
+
+  position: relative;
+  line-height: 1.3em;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: $border;
+}
+
+
+.my-events--row-link {
+  display: block;
+  position: absolute;
+  left:   -1.5vw;
+  right:  -1.5vw;
+  top:    0;
+  bottom: 0;
+  z-index: 2;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: rgba($color-base, .03 );
+  }
+
+  @include for-tablet-portrait-down {
+    left:   -.8rem;
+    right:  -.8rem;
+    top: 0;
+    bottom: -1rem;
+  }
+}
+
+.my-events--time {
+  font-size: .8rem;
+}
+
+.my-events--transport {
+  font-size: .8rem;
+  color: $color-base-light;
+}
+
+.my-events--area-activity {}
+.my-events--activity-name {
+  font-weight: bold;
+}
+
+.my-events--activity-specs {
+  @extend .text-secondary;
+}
+
+.my-events--area-people {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8em;
+}
+
+.my-events--show-more {
+  text-align: right;
+}
