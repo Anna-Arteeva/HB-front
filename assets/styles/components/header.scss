@@ -28,7 +28,7 @@
 
   @include for-phone-only {
     position: absolute;
-    left: 0;
+    left: 3vw;
     bottom: 0;
     max-width: calc(100vw - 2 * #{$padding-h});
     flex-wrap: wrap;

@@ -7,6 +7,11 @@
   flex-wrap: wrap;
 }
 
+.events-tabs {
+  display: flex;
+  align-items: flex-end;
+}
+
 .events-nav--link {
   color: $color-base-light;
   text-decoration: none;
@@ -45,6 +50,10 @@
     width: 100%;
    // display: none;
   }
+}
+
+.events-nav--link--my-events {
+  @include for-tablet-landscape-up { display: none; }
 }
 
 .events-search-input {

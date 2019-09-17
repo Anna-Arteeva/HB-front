@@ -7,11 +7,21 @@
           "nav            my-events"
           "events-section my-events"
           "footer         my-events";
+
+
+  @include for-tablet-landscape-down {
+
+    grid-template-columns:  auto;
+    grid-template-areas:
+            "nav           "
+            "events-section"
+            "footer        ";
+  }
 }
 
 // name sections for grid
 
-.section-breakpoints {
+.header-full {
   grid-area: nav;
 }
 
