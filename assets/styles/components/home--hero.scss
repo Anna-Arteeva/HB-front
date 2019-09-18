@@ -62,12 +62,27 @@
  // }
 }
 
+.home--hero--search--wrapper {
+  position: relative;
+  margin-top: 2vh;
+
+  &:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f002";
+    color: $color-muted;
+    position: absolute;
+    top:  1rem;
+    left: .9rem;
+  }
+}
+
 .home--hero--search {
   @extend .form;
   width:  520px;
   max-width: 90vw;
-  margin-top: 2vh;
   background-color: $color-back;
+  padding-left: 2.5rem;
 }
 
 .home--hero--carousel {

@@ -1056,11 +1056,23 @@ input[type='radio'] {
   background-size: cover;
   background-position: 40%; }
 
+.home--hero--search--wrapper {
+  position: relative;
+  margin-top: 2vh; }
+  .home--hero--search--wrapper:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f002";
+    color: rgba(47, 54, 59, 0.6);
+    position: absolute;
+    top: 1rem;
+    left: .9rem; }
+
 .home--hero--search {
   width: 520px;
   max-width: 90vw;
-  margin-top: 2vh;
-  background-color: #F2F3F6; }
+  background-color: #F2F3F6;
+  padding-left: 2.5rem; }
 
 @media (min-width: 900px) {
   .home--hero--carousel {
@@ -1277,7 +1289,7 @@ input[type='radio'] {
     border-bottom-color: var(--color-brand); }
 
 .events-search {
-  flex-grow: 1; }
+  position: relative; }
   @media (min-width: 600px) {
     .events-search {
       justify-content: flex-end;
@@ -1286,13 +1298,22 @@ input[type='radio'] {
     .events-search {
       margin-top: .8rem;
       width: 100%; } }
+  .events-search:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f002";
+    color: rgba(47, 54, 59, 0.6);
+    position: absolute;
+    top: .55rem;
+    left: .5rem; }
 
 @media (min-width: 900px) {
   .events-nav--link--my-events {
     display: none; } }
 
 .events-search-input {
-  width: inherit; }
+  width: 100%;
+  padding-left: 2.1rem; }
 
 @media (min-width: 600px) {
   .events-date {
@@ -7972,6 +7993,21 @@ readers do not read off random characters that represent icons */
   overflow: visible;
   position: static;
   width: auto; }
+
+/*!
+ * Font Awesome Pro 5.10.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("assets/fonts/fontawesome/fa-regular-400.eot");
+  src: url("assets/fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("assets/fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("assets/fonts/fontawesome/fa-regular-400.woff") format("woff"), url("assets/fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("assets/fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg"); }
+.far {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 400; }
 
 /*!
  * Font Awesome Pro 5.10.2 by @fontawesome - https://fontawesome.com
