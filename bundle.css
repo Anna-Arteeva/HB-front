@@ -672,7 +672,7 @@ input[type='submit'] {
   top: .1rem;
   left: .3rem; }
 
-.form, .header--search, .home--hero--search, .events-search-input {
+.form, .search--input, .header--search, .events-search-input, .home--hero--search {
   appearance: none;
   background-color: transparent;
   border: 1px solid #EAEEF3;
@@ -682,9 +682,9 @@ input[type='submit'] {
   height: 3em;
   padding: 0.6rem 1rem;
   width: 100%; }
-  .form.form-sm, .form-sm.header--search, .form-sm.home--hero--search, .events-search-input {
+  .form.form-sm, .search--input, .header--search, .events-search-input, .form-sm.home--hero--search {
     font-size: 1em;
-    height: 2.2em;
+    height: 38px;
     line-height: 2em;
     padding: 0 0.5em; }
 
@@ -731,6 +731,21 @@ input[type='radio'] {
   margin-left: 0.5rem; }
 
 /*# sourceMappingURL=form.scss.map */
+.search--input, .header--search, .events-search-input {
+  padding-left: 2.2rem; }
+
+.search--wrapper, .header--search--wrapper, .events-search {
+  position: relative; }
+  .search--wrapper:after, .header--search--wrapper:after, .events-search:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f002";
+    color: rgba(47, 54, 59, 0.6);
+    opacity: .5;
+    position: absolute;
+    top: .65rem;
+    left: .65rem; }
+
 .badge, .badge-1, .badge-2, .badge-3, .badge-4, .badge-5, .badge-6 {
   color: white;
   display: inline-block;
@@ -758,7 +773,7 @@ input[type='radio'] {
 .badge-6 {
   background-color: #0059A2; }
 
-.header, .header-full {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -767,13 +782,14 @@ input[type='radio'] {
   flex-wrap: wrap;
   margin-top: calc(4vh); }
   @media (max-width: 599px) {
-    .header, .header-full {
+    .header {
       margin-top: 1rem;
       height: 6rem; } }
 
 .header-right {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  flex-grow: 1; }
 
 .header--nav {
   padding-top: 9px;
@@ -804,13 +820,6 @@ input[type='radio'] {
   .header--link:hover, .header--link:focus, .header--link:active {
     color: var(--color-brand);
     border-bottom-color: var(--color-brand); }
-
-.header--search {
-  height: 38px;
-  min-width: 38px;
-  padding: .5rem .7rem;
-  background: var(--color-outline);
-  border-radius: var(--border-radius-lg); }
 
 .header--profile {
   height: 38px;
@@ -843,12 +852,12 @@ input[type='radio'] {
       height: 2em !important;
       line-height: 2em !important; } }
 
-.header-full {
+.events-grid .header {
   margin-top: 3vh;
   padding-left: 3vw;
   padding-right: 3vw;
   border-bottom: 0; }
-  .header-full:before {
+  .events-grid .header:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -856,7 +865,7 @@ input[type='radio'] {
     right: 3vw;
     border-bottom: 1px solid #EAEEF3; }
 
-.header-home .header--search {
+.home--hero .header--search {
   display: none; }
 
 .header--logo {
@@ -872,13 +881,13 @@ input[type='radio'] {
     .header--logo-mobile {
       display: inherit; } }
 
-.section-breakpoints, .header-full, .section, .section-back, .home--about, .events-section {
+.section-breakpoints, .events-grid .header, .section, .section-back, .home--about, .events-section {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   max-width: 100rem; }
   @media (max-width: calc(600px - 1px)) {
-    .section-breakpoints, .header-full, .section, .section-back, .home--about, .events-section {
+    .section-breakpoints, .events-grid .header, .section, .section-back, .home--about, .events-section {
       width: 100vw; } }
 
 .section, .section-back, .home--about, .events-section {
@@ -1289,32 +1298,18 @@ input[type='radio'] {
     color: var(--color-brand);
     border-bottom-color: var(--color-brand); }
 
-.events-search {
-  position: relative; }
-  @media (min-width: 600px) {
-    .events-search {
-      justify-content: flex-end;
-      text-align: right; } }
-  @media (max-width: 599px) {
-    .events-search {
-      margin-top: .8rem;
-      width: 100%; } }
-  .events-search:after {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    content: "\f002";
-    color: rgba(47, 54, 59, 0.6);
-    position: absolute;
-    top: .55rem;
-    left: .5rem; }
+@media (min-width: 600px) {
+  .events-search {
+    justify-content: flex-end;
+    text-align: right; } }
+@media (max-width: 599px) {
+  .events-search {
+    margin-top: .8rem;
+    width: 100%; } }
 
 @media (min-width: 900px) {
   .events-nav--link--my-events {
     display: none; } }
-
-.events-search-input {
-  width: 100%;
-  padding-left: 2.1rem; }
 
 @media (min-width: 600px) {
   .events-date {

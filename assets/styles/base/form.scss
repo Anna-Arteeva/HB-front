@@ -24,7 +24,7 @@
 
   &.form-sm {
     font-size: 1em;
-    height: 2.2em;
+    height: 38px;
     line-height: 2em;
     padding: 0 0.5em;
   }
@@ -71,3 +71,22 @@ input[type='radio'] {
   margin-left: 0.5rem; }
 
 /*# sourceMappingURL=form.scss.map */
+.search--input {
+  @extend .form;
+  @extend .form-sm;
+  padding-left: 2.2rem;
+}
+
+.search--wrapper {
+  position: relative;
+  &:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f002";
+    color: $color-muted;
+    opacity: .5;
+    position: absolute;
+    top:  .65rem;
+    left: .65rem;
+  }
+}

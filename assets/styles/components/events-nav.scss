@@ -40,8 +40,7 @@
 }
 
 .events-search {
-  //flex-grow: 1;
-  position: relative;
+  @extend .search--wrapper;
 
   @include for-tablet-portrait-up {
     justify-content: flex-end;
@@ -50,27 +49,11 @@
   @include for-phone-only {
     margin-top: .8rem;
     width: 100%;
-   // display: none;
-  }
-
-  &:after {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    content: "\f002";
-    color: $color-muted;
-    position: absolute;
-    top:  .55rem;
-    left: .5rem;
   }
 }
+
+.events-search-input { @extend .search--input; }
 
 .events-nav--link--my-events {
   @include for-tablet-landscape-up { display: none; }
-}
-
-.events-search-input {
-  @extend .form;
-  @extend .form-sm;
-  width: 100%;
-  padding-left: 2.1rem;
 }

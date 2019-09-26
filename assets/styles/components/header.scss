@@ -5,19 +5,18 @@
   border-bottom: $border;
   position: relative;
   flex-wrap: wrap;
-
   margin-top:     $section-padding-v-sm;
 
   @include for-phone-only {
     margin-top: 1rem;
     height: 6rem;
   }
- // padding-bottom: 16px;
 }
 
 .header-right {
   display: flex;
   justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .header--nav {
@@ -60,21 +59,8 @@
   }
 }
 
-
-
-.header--search {
-@extend .form;
-  height: 38px;
-  min-width:  38px;
-  padding: .5rem .7rem;
-
-  background: var(--color-outline);
-  border-radius: var(--border-radius-lg);
-
-  &:before {
-    //icon
-  }
-}
+.header--search--wrapper { @extend .search--wrapper;}
+.header--search {          @extend .search--input;  }
 
 .header--profile {
   height: 38px;
@@ -115,8 +101,7 @@
   }
 }
 
-.header-full {
-  @extend .header;
+.events-grid .header {
   margin-top: 3vh;
   @extend .section-breakpoints;
 
@@ -136,6 +121,6 @@
   }
 }
 
-.header-home .header--search {
+.home--hero .header--search {
   display: none;
 }
