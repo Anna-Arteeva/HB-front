@@ -48,6 +48,10 @@
   @include for-tablet-portrait-up {
     border-bottom: solid 1px $color-outline;
     text-align: right;
+
+    span {
+      display: block;
+    }
   }
 }
 

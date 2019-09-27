@@ -8,7 +8,26 @@
 
   @include for-tablet-landscape-up {
     grid-template-columns: 2fr 1fr;
+  }
 
+  .my-events {
+    display: none;
+  }
+
+  &.has-my-events {
+    .my-events {
+      display: block;
+      width: 100%;
+    }
+    .home--hero--image {
+      display: none;
+    }
+
+    .home--hero--carousel {
+      @include for-tablet-landscape-up {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -46,6 +65,7 @@
   @include for-tablet-landscape-up {
     padding: 1rem 0;
   }
+
 
 }
 

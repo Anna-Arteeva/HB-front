@@ -1026,6 +1026,16 @@ input[type='radio'] {
   @media (min-width: 900px) {
     .home--hero {
       grid-template-columns: 2fr 1fr; } }
+  .home--hero .my-events {
+    display: none; }
+  .home--hero.has-my-events .my-events {
+    display: block;
+    width: 100%; }
+  .home--hero.has-my-events .home--hero--image {
+    display: none; }
+  @media (min-width: 900px) {
+    .home--hero.has-my-events .home--hero--carousel {
+      margin-right: 0; } }
 
 .home--hero--content-wrapper {
   display: flex;
@@ -1357,7 +1367,9 @@ input[type='radio'] {
   @media (min-width: 600px) {
     .events-table--area-people {
       border-bottom: solid 1px #EAEEF3;
-      text-align: right; } }
+      text-align: right; }
+      .events-table--area-people span {
+        display: block; } }
 
 .events-table--grid, .events-table-head, .events-table--row {
   display: grid; }
