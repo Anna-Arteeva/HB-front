@@ -927,7 +927,6 @@ input[type='radio'] {
   font-size: .8em; }
 
 .footer {
-  border-bottom: 1px solid #EAEEF3;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -1071,7 +1070,7 @@ input[type='radio'] {
   width: 100%;
   border-top-left-radius: var(--border-radius-lg);
   border-bottom-left-radius: var(--border-radius-lg);
-  background-image: url("assets/images/photos/people-hiking.jpeg");
+  background-image: url("assets/images/photos/people-hiking.jpg");
   background-size: cover;
   background-position: 40%; }
 
