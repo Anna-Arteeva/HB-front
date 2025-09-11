@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <!-- Background terrain gradient -->
+    <radialGradient id="terrain" cx="55%" cy="60%" r="80%">
+      <stop offset="0%" stop-color="#6b7a3e"/>
+      <stop offset="55%" stop-color="#3a4a2b"/>
+      <stop offset="100%" stop-color="#24301d"/>
+    </radialGradient>
+
+    <!-- Summit snow highlight -->
+    <radialGradient id="snow" cx="50%" cy="62%" r="24%">
+      <stop offset="0%" stop-color="#f6f9fb" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#d8dee6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#aeb5bf" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Heatmap stroke gradient -->
+    <linearGradient id="heat" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6415e7"/>
+      <stop offset="45%" stop-color="#ff4d00"/>
+      <stop offset="85%" stop-color="#ffbf00"/>
+      <stop offset="100%" stop-color="#fff2a1"/>
+    </linearGradient>
+
+    <!-- UI shadows -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Button background -->
+    <linearGradient id="btn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f4f8"/>
+    </linearGradient>
+
+    <!-- Icon stroke style -->
+    <style>
+      .heat { fill: none; stroke: url(#heat); stroke-linecap: round; stroke-linejoin: round; }
+      .h1 { stroke-width: 6; opacity: 0.95; }
+      .h2 { stroke-width: 4; opacity: 0.8; }
+      .h3 { stroke-width: 2.5; opacity: 0.7; }
+      .road { fill: none; stroke: #8b9099; stroke-width: 3; opacity: 0.35; }
+      .poi { filter: url(#softShadow); }
+      text { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
+  </defs>
+
+  <!-- Map background -->
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#terrain)"/>
+
+  <!-- Mountain / volcano snowy cap hint -->
+  <ellipse cx="800" cy="620" rx="340" ry="260" fill="url(#snow)"/>
+
+  <!-- Nearby river/roads (faint context) -->
+  <path class="road" d="M1160,415 C1180,420 1240,450 1280,480 1320,510 1420,560 1490,560 1520,560 1550,555 1585,545"/>
+  <path class="road" d="M1170,450 C1190,470 1220,500 1245,520 1270,540 1320,560 1340,575 1360,590 1390,615 1415,640 1440,665 1470,690 1500,710"/>
+
+  <!-- Heatmap traces radiating from summit center (approx 800,620) -->
+  <g>
+    <!-- High frequency routes (bright/thick) -->
+    <path class="heat h1" d="M800,620 C760,610 700,570 660,520 615,460 600,420 560,380 520,340 470,320 430,315"/>
+    <path class="heat h1" d="M800,620 C850,600 930,560 980,520 1035,475 1100,450 1170,445 1235,440 1300,458 1385,490"/>
+    <path class="heat h1" d="M800,620 C760,650 720,690 700,740 682,787 650,845 595,885 540,925 470,950 415,955"/>
+    <path class="heat h1" d="M800,620 C840,660 900,720 940,770 975,814 1000,850 1045,880 1095,914 1170,940 1245,952"/>
+
+    <!-- Medium frequency routes -->
+    <path class="heat h2" d="M800,620 C770,600 730,570 705,540 680,505 665,470 630,445 600,420 555,410 520,400 475,388 430,375 380,370"/>
+    <path class="heat h2" d="M800,620 C830,600 875,575 910,555 950,530 980,505 1020,495 1080,480 1140,480 1200,490 1265,500 1340,525 1405,555"/>
+    <path class="heat h2" d="M800,620 C770,640 740,670 715,705 690,740 675,785 655,820 630,867 590,905 545,930 510,951 470,960 430,968"/>
+    <path class="heat h2" d="M800,620 C835,650 870,685 900,720 928,752 955,795 980,830 1010,872 1055,900 1105,922 1160,946 1220,955 1280,960"/>
+    <path class="heat h2" d="M800,620 C740,610 690,595 650,575 600,548 560,515 520,495 480,475 440,470 400,465 355,460 300,460 255,462"/>
+    <path class="heat h2" d="M800,620 C860,610 905,600 945,585 1000,565 1045,540 1100,535 1145,530 1190,540 1235,555 1280,570 1340,600 1390,630"/>
+
+    <!-- Low frequency routes -->
+    <path class="heat h3" d="M800,620 C780,595 760,560 740,530 720,500 700,470 675,450 650,430 610,420 580,410 545,400 510,392 480,388 430,382 380,382 340,384"/>
+    <path class="heat h3" d="M800,620 C820,600 850,575 875,555 900,535 915,520 945,505 985,485 1030,470 1080,468 1125,466 1180,480 1230,498 1275,514 1325,540 1355,560 1400,590 1440,620 1475,650"/>
+    <path class="heat h3" d="M800,620 C785,650 770,685 755,710 735,745 715,770 690,800 660,835 615,870 580,895 545,920 510,940 475,952 430,968 380,976 340,978"/>
+    <path class="heat h3" d="M800,620 C825,650 850,680 875,705 900,730 920,750 945,780 975,815 1005,845 1035,865 1075,892 1120,910 1170,930 1210,946 1255,952 1300,958"/>
+    <path class="heat h3" d="M800,620 C735,620 670,610 620,592 560,569 520,538 480,512 430,480 370,460 320,448 270,436 215,430 170,430"/>
+    <path class="heat h3" d="M800,620 C870,605 935,585 980,565 1030,544 1065,520 1120,512 1175,504 1230,510 1280,525 1325,538 1365,560 1405,580 1445,600 1480,615 1515,628"/>
+    <path class="heat h3" d="M800,620 C760,635 730,650 700,660 660,675 615,680 580,690 535,703 490,720 460,738 420,762 395,792 370,825 345,858 325,890 300,920"/>
+    <path class="heat h3" d="M800,620 C840,640 880,660 915,690 950,720 985,750 1010,785 1035,820 1050,860 1070,890 1095,926 1125,950 1165,970"/>
+  </g>
+
+  <!-- POI markers -->
+  <g class="poi">
+    <!-- Summit dot -->
+    <circle cx="800" cy="620" r="8" fill="#bfc7d5" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- Cafe / martini icon near top center -->
+    <g transform="translate(920,300)">
+      <circle r="22" fill="#b36cff" stroke="#fff" stroke-width="4"/>
+      <path d="M -8,-8 L 8,-8 L 0,2 Z" fill="#fff"/>
+      <rect x="-2" y="2" width="4" height="10" fill="#fff"/>
+    </g>
+
+    <!-- Bike icons along two routes -->
+    <g transform="translate(820,520)">
+      <circle r="22" fill="#ff7a00" stroke="#fff" stroke-width="4"/>
+      <circle cx="-7" cy="6" r="5" fill="#fff"/>
+      <circle cx="10" cy="6" r="5" fill="#fff"/>
+      <path d="M -7,6 L -1,-4 L 6,6 L 10,-2" stroke="#fff" stroke-width="3" fill="none"/>
+    </g>
+    <g transform="translate(1160,500)">
+      <circle r="22" fill="#ff7a00" stroke="#fff" stroke-width="4"/>
+      <circle cx="-7" cy="6" r="5" fill="#fff"/>
+      <circle cx="10" cy="6" r="5" fill="#fff"/>
+      <path d="M -7,6 L -1,-4 L 6,6 L 10,-2" stroke="#fff" stroke-width="3" fill="none"/>
+    </g>
+
+    <!-- Camera icon on right cluster -->
+    <g transform="translate(1470,420)">
+      <circle r="22" fill="#2ea8ff" stroke="#fff" stroke-width="4"/>
+      <rect x="-10" y="-6" width="20" height="14" rx="3" fill="#fff"/>
+      <circle cx="0" cy="1" r="4" fill="#2ea8ff"/>
+      <rect x="-6" y="-12" width="12" height="5" rx="2" fill="#fff"/>
+    </g>
+  </g>
+
+  <!-- Right-side vertical action buttons -->
+  <g transform="translate(1500,240)" filter="url(#softShadow)">
+    <!-- Layers -->
+    <g>
+      <circle cx="0" cy="0" r="32" fill="url(#btn)"/>
+      <path d="M -10,0 L 0,-8 L 10,0 L 0,8 Z" fill="#111827" opacity="0.95"/>
+      <path d="M -8,-8 L 0,-14 L 8,-8" fill="none" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M -8,8 L 0,14 L 8,8" fill="none" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+    </g>
+    <!-- 3D -->
+    <g transform="translate(0,90)">
+      <circle cx="0" cy="0" r="32" fill="url(#btn)"/>
+      <path d="M -12,6 L 0,-8 L 12,6 L 0,14 Z" fill="#111827" opacity="0.95"/>
+      <text x="0" y="48" text-anchor="middle" font-size="18" fill="#ffffff" opacity="0.85">3D</text>
+    </g>
+    <!-- Locate -->
+    <g transform="translate(0,180)">
+      <circle cx="0" cy="0" r="32" fill="url(#btn)"/>
+      <circle cx="0" cy="0" r="9" fill="none" stroke="#111827" stroke-width="3"/>
+      <line x1="0" y1="-18" x2="0" y2="-10" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+      <line x1="0" y1="18" x2="0" y2="10" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-18" y1="0" x2="-10" y2="0" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+      <line x1="18" y1="0" x2="10" y2="0" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <!-- Edit -->
+    <g transform="translate(0,270)">
+      <circle cx="0" cy="0" r="32" fill="url(#btn)"/>
+      <path d="M -8,12 L -4,-2 L 10,-16 L 16,-10 L 2,4 Z" fill="#111827"/>
+    </g>
+  </g>
+
+  <!-- Top app bar -->
+  <g filter="url(#softShadow)">
+    <rect x="40" y="28" width="880" height="68" rx="18" fill="#111827" opacity="0.9"/>
+    <text x="70" y="72" fill="#ffffff" font-size="26" font-weight="700">Personal Heatmap</text>
+    <text x="320" y="72" fill="#cfd8e3" font-size="18" opacity="0.9">Cycling • Last 12 months • Satellite</text>
+  </g>
+
+  <!-- Bottom-left branding and scale -->
+  <g opacity="0.85">
+    <rect x="54" y="922" width="120" height="44" rx="10" fill="#111827" opacity="0.9"/>
+    <circle cx="72" cy="944" r="9" fill="#00d1ff"/>
+    <text x="90" y="950" fill="#ffffff" font-size="18" font-weight="600">mapbox</text>
+    <rect x="210" y="936" width="160" height="6" rx="3" fill="#ffffff" opacity="0.85"/>
+    <text x="214" y="960" fill="#ffffff" font-size="14" opacity="0.9">500 m</text>
+  </g>
+
+  <!-- Left-side filters panel (collapsed look) -->
+  <g filter="url(#softShadow)">
+    <rect x="40" y="140" width="270" height="210" rx="18" fill="#ffffff" opacity="0.92"/>
+    <text x="62" y="176" fill="#111827" font-size="18" font-weight="700">Filters</text>
+    <text x="62" y="210" fill="#111827" font-size="15">Sport</text>
+    <rect x="62" y="220" width="200" height="38" rx="10" fill="#f1f5f9"/>
+    <text x="80" y="245" fill="#111827" font-size="15">Cycling</text>
+    <text x="62" y="270" fill="#111827" font-size="15">Time range</text>
+    <rect x="62" y="280" width="200" height="38" rx="10" fill="#f1f5f9"/>
+    <text x="80" y="305" fill="#111827" font-size="15">Last 12 months</text>
+    <text x="62" y="335" fill="#111827" font-size="15">Color</text>
+    <rect x="62" y="345" width="200" height="38" rx="10" fill="#f1f5f9"/>
+    <rect x="76" y="360" width="80" height="8" rx="4" fill="#6415e7"/>
+    <rect x="116" y="360" width="80" height="8" rx="4" fill="#ff4d00"/>
+    <rect x="156" y="360" width="80" height="8" rx="4" fill="#ffbf00"/>
+  </g>
+</svg>
+
